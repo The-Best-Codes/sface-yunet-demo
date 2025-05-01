@@ -1,0 +1,11 @@
+[project]
+name = "sface"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.2.5",
+    "opencv-python>=4.11.0.86",
+    "tqdm>=4.67.1",
+]
