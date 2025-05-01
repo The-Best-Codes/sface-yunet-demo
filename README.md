@@ -1,8 +1,15 @@
-## Sface + Yunet Example
+## SFace + Yunet Example
 
-This is an example of using Sface + Yunet models for face detection and recognition.
+This is an example of using SFace + Yunet models for face detection and recognition.
 
 ## Installation
+
+### You will need:
+
+- Python (preferably Python 3.11)
+- A WebCam
+
+### Download & Run
 
 > [!NOTE]
 > It is recommended to use [`uv`](https://github.com/astral-sh/uv) for installing packages and running the application, but you can probably use `pip` instead.
