@@ -11,3 +11,7 @@ wheels/
 
 # ruff cache
 .ruff_cache/
+
+# face recognition screenshots
+data/images/*
+!data/images/.gitkeep
