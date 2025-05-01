@@ -27,8 +27,17 @@ cd sface-yunet-demo
 uv add numpy opencv-python tqdm
 ```
 
+## Usage
+
 Run the application:
 
 ```bash
 uv run main.py
 ```
+
+- Save an image of yourself as a profile. Click the save button:
+
+![Save Button Image](.assets/topbar_save_button.png)
+
+- Save the image in the `data/images` directory in the project directory.
+- Restart the program and it will recognize your face (as the file name you saved).
