@@ -64,11 +64,11 @@ def main():
     # Init models face detection & recognition
     weights = os.path.join(directory, "models",
                            "face_detection_yunet_2023mar.onnx")
-    face_detector = cv2.FaceDetectorYN_create(weights, "", (0, 0))
+    face_detector = cv2.FaceDetectorYN.create(weights, "", (0, 0))
     face_detector.setScoreThreshold(0.87)
 
     weights = os.path.join(directory, "models", "face_recognition_sface_2021dec.onnx")
-    face_recognizer = cv2.FaceRecognizerSF_create(weights, "")
+    face_recognizer = cv2.FaceRecognizerSF.create(weights, "")
 
     # Get registered photos and return as npy files
     # File name = id name, embeddings of a photo is the representative for the id
