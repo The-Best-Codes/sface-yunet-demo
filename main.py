@@ -59,13 +59,13 @@ def recognize_face(image, face_detector, face_recognizer, file_name=None):
         return None, None
 
 def main():
-    
+
     # contain npy for embedings and registration photos
     directory = 'data'
 
     # Init models face detection & recognition
     weights = os.path.join(directory, "models",
-                           "face_detection_yunet_2022mar.onnx")
+                           "face_detection_yunet_2023mar.onnx")
     face_detector = cv2.FaceDetectorYN_create(weights, "", (0, 0))
     face_detector.setScoreThreshold(0.87)
 
