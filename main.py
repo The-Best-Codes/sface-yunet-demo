@@ -89,7 +89,8 @@ def main():
         if faces is None:
             continue
         user_id = os.path.splitext(os.path.basename(file))[0]
-        dictionary[user_id] = feats[0]
+        if feats is not None:
+            dictionary[user_id] = feats[0]
 
     print(f'there are {len(dictionary)} ids')
     capture = cv2.VideoCapture(0)
@@ -103,24 +104,25 @@ def main():
             cv2.waitKey(0)
             break
 
-        fetures, faces = recognize_face(image, face_detector, face_recognizer)
+        features, faces = recognize_face(image, face_detector, face_recognizer)
         if faces is None:
             continue
 
-        for idx, (face, feature) in enumerate(zip(faces, fetures)):
-            result, user = match(face_recognizer, feature, dictionary)
-            box = list(map(int, face[:4]))
-            color = (0, 255, 0) if result else (0, 0, 255)
-            thickness = 2
-            cv2.rectangle(image, box, color, thickness, cv2.LINE_AA)
+        if faces is not None and features is not None:
+            for idx, (face, feature) in enumerate(zip(faces, features)):
+                result, user = match(face_recognizer, feature, dictionary)
+                box = list(map(int, face[:4]))
+                color = (0, 255, 0) if result else (0, 0, 255)
+                thickness = 2
+                cv2.rectangle(image, box, color, thickness, cv2.LINE_AA)
 
-            id_name, score = user if result else (f"unknown_{idx}", 0.0)
-            text = "{0} ({1:.2f})".format(id_name, score)
-            position = (box[0], box[1] - 10)
-            font = cv2.FONT_HERSHEY_SIMPLEX
-            scale = 0.6
-            cv2.putText(image, text, position, font, scale,
-                        color, thickness, cv2.LINE_AA)
+                id_name, score = user if result else (f"unknown_{idx}", 0.0)
+                text = "{0} ({1:.2f})".format(id_name, score)
+                position = (box[0], box[1] - 10)
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                scale = 0.6
+                cv2.putText(image, text, position, font, scale,
+                            color, thickness, cv2.LINE_AA)
 
         cv2.imshow("face recognition", image)
         key = cv2.waitKey(1)
