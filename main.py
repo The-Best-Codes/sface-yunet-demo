@@ -2,9 +2,7 @@ import os
 import sys
 import glob
 import time
-import math
 import cv2
-import numpy as np
 from tqdm import tqdm
 
 COSINE_THRESHOLD = 0.5
