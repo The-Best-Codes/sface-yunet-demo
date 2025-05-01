@@ -85,7 +85,7 @@ wheels = [
 ]
 
 [[package]]
-name = "sface"
+name = "sface-yunet-demo"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

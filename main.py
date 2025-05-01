@@ -69,7 +69,7 @@ def main():
     face_detector = cv2.FaceDetectorYN_create(weights, "", (0, 0))
     face_detector.setScoreThreshold(0.87)
 
-    weights = os.path.join(directory, "models", "face_recognizer_fast.onnx")
+    weights = os.path.join(directory, "models", "face_recognition_sface_2021dec.onnx")
     face_recognizer = cv2.FaceRecognizerSF_create(weights, "")
 
     # Get registered photos and return as npy files
