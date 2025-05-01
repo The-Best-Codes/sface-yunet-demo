@@ -24,7 +24,7 @@ Install dependencies:
 
 ```bash
 cd sface-yunet-demo
-uv add numpy opencv-python tqdm
+uv add -r requirements.txt
 ```
 
 ## Usage
