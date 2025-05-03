@@ -11,7 +11,7 @@ This is an example of using SFace + Yunet models for face detection and recognit
 
 ### Download Everything
 
-### Clone Repo
+#### Clone Repo
 
 > [!NOTE]
 > It is recommended to use [`uv`](https://github.com/astral-sh/uv) for installing packages and running the application, but you can probably use `pip` instead.
@@ -22,7 +22,7 @@ Clone the repository:
 git clone https://github.com/The-Best-Codes/sface-yunet-demo.git
 ```
 
-### Download Model Files
+#### Download Model Files
 
 > [!IMPORTANT]
 > You **must** run the Git LFS commands below after pulling the repository to pull the model ONNX files. They are stored in Git LFS and won't be pulled by default.
