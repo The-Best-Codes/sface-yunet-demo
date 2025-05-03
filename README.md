@@ -13,9 +13,6 @@ This is an example of using SFace + Yunet models for face detection and recognit
 
 #### Clone Repo
 
-> [!NOTE]
-> It is recommended to use [`uv`](https://github.com/astral-sh/uv) for installing packages and running the application, but you can probably use `pip` instead.
-
 Clone the repository:
 
 ```bash
@@ -48,6 +45,9 @@ git lfs pull
 ```
 
 ## Usage
+
+> [!NOTE]
+> It is recommended to use [`uv`](https://github.com/astral-sh/uv) for installing packages and running the application, but you can probably use `pip` instead.
 
 Install dependencies:
 
