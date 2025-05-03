@@ -9,7 +9,9 @@ This is an example of using SFace + Yunet models for face detection and recognit
 - Python (preferably Python 3.11)
 - A WebCam
 
-### Download & Run
+### Download Everything
+
+### Clone Repo
 
 > [!NOTE]
 > It is recommended to use [`uv`](https://github.com/astral-sh/uv) for installing packages and running the application, but you can probably use `pip` instead.
@@ -19,6 +21,8 @@ Clone the repository:
 ```bash
 git clone https://github.com/The-Best-Codes/sface-yunet-demo.git
 ```
+
+### Download Model Files
 
 > [!IMPORTANT]
 > You **must** run the Git LFS commands below after pulling the repository to pull the model ONNX files. They are stored in Git LFS and won't be pulled by default.
@@ -43,14 +47,14 @@ Now, pull the Git LFS model files:
 git lfs pull
 ```
 
+## Usage
+
 Install dependencies:
 
 ```bash
 cd sface-yunet-demo
 uv add -r requirements.txt
 ```
-
-## Usage
 
 Run the application:
 
