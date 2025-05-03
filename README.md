@@ -21,7 +21,7 @@ git clone https://github.com/The-Best-Codes/sface-yunet-demo.git
 ```
 
 > [!IMPORTANT]
-> You **must** run the command below after pulling the repository to pull the model ONNX files. They are stored in Git LFS and won't be pulled by default.
+> You **must** run the Git LFS commands below after pulling the repository to pull the model ONNX files. They are stored in Git LFS and won't be pulled by default.
 
 Check and make sure you have Git LFS installed:
 
